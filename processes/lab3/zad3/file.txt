@@ -1,0 +1,10 @@
+ls
+ls -l
+ps
+echo 'przykladowe' echo
+#var blabla
+#var
+./main2 
+./main3 10
+./main3 100
+./main3 1000

@@ -1,0 +1,576 @@
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 48.000000 us
+user time: 1428.000000 us
+real time: 1510.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 95.000000 us
+user time: 19480.000000 us
+real time: 19741.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 53.000000 us
+user time: 945.000000 us
+real time: 1033.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 24.000000 us
+user time: 1006.000000 us
+real time: 1041.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 400.000000 us
+user time: 3882.000000 us
+real time: 4295.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 23.000000 us
+user time: 9206.000000 us
+real time: 9385.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 320.000000 us
+user time: 3425.000000 us
+real time: 4124.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 133.000000 us
+user time: 2749.000000 us
+real time: 2934.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 36.000000 us
+user time: 1396.000000 us
+real time: 1432.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 16.000000 us
+user time: 17665.000000 us
+real time: 17697.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 17.000000 us
+user time: 775.000000 us
+real time: 798.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 24.000000 us
+user time: 931.000000 us
+real time: 963.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 357.000000 us
+user time: 3428.000000 us
+real time: 3805.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 42.000000 us
+user time: 9725.000000 us
+real time: 9817.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 214.000000 us
+user time: 2600.000000 us
+real time: 3373.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 15.000000 us
+user time: 2893.000000 us
+real time: 2917.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 205.000000 us
+user time: 1555.000000 us
+real time: 1810.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 99.000000 us
+user time: 19362.000000 us
+real time: 19626.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 33.000000 us
+user time: 930.000000 us
+real time: 979.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 25.000000 us
+user time: 995.000000 us
+real time: 1033.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 662.000000 us
+user time: 5092.000000 us
+real time: 5921.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 134.000000 us
+user time: 9695.000000 us
+real time: 10284.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 335.000000 us
+user time: 3234.000000 us
+real time: 4331.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 242.000000 us
+user time: 3551.000000 us
+real time: 4059.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 46.000000 us
+user time: 1418.000000 us
+real time: 1467.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 40.000000 us
+user time: 17868.000000 us
+real time: 17958.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 36.000000 us
+user time: 839.000000 us
+real time: 903.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 32.000000 us
+user time: 929.000000 us
+real time: 980.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 345.000000 us
+user time: 3074.000000 us
+real time: 3444.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 18.000000 us
+user time: 8773.000000 us
+real time: 8819.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 71.000000 us
+user time: 2275.000000 us
+real time: 2380.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 55.000000 us
+user time: 2607.000000 us
+real time: 2679.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 179.000000 us
+user time: -437407.000000 us
+real time: -3041409362377780.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 125.000000 us
+user time: -465513.000000 us
+real time: -3041409362406636.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 42.000000 us
+user time: -492925.000000 us
+real time: -3041409362434661.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 21.000000 us
+user time: -495118.000000 us
+real time: -3041409362436973.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 659.000000 us
+user time: -501748.000000 us
+real time: -3041409362444309.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 90.000000 us
+user time: -520242.000000 us
+real time: -3041409362466810.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 258.000000 us
+user time: -537234.000000 us
+real time: -3041409362487436.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 297.000000 us
+user time: -544307.000000 us
+real time: -3041409362495332.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 222.000000 us
+user time: 1728.000000 us
+real time: 2035.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 1030.000000 us
+user time: 25035.000000 us
+real time: 28790.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 24.000000 us
+user time: 816.000000 us
+real time: 842.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 5.000000 us
+user time: 895.000000 us
+real time: 902.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 466.000000 us
+user time: 3236.000000 us
+real time: 3762.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 854.000000 us
+user time: 11894.000000 us
+real time: 18407.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 391.000000 us
+user time: 3027.000000 us
+real time: 4380.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 936.000000 us
+user time: 6005.000000 us
+real time: 9157.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 159.000000 us
+user time: 1783.000000 us
+real time: 2529.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 294.000000 us
+user time: 19267.000000 us
+real time: 19849.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 44.000000 us
+user time: 838.000000 us
+real time: 918.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 19.000000 us
+user time: 916.000000 us
+real time: 956.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 377.000000 us
+user time: 3087.000000 us
+real time: 3510.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 19.000000 us
+user time: 8762.000000 us
+real time: 8808.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 76.000000 us
+user time: 2212.000000 us
+real time: 2333.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 151.000000 us
+user time: 2604.000000 us
+real time: 2801.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 37.000000 us
+user time: 1543.000000 us
+real time: 1577.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 159.000000 us
+user time: 18161.000000 us
+real time: 19152.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 19.000000 us
+user time: 800.000000 us
+real time: 819.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 31.000000 us
+user time: 924.000000 us
+real time: 960.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 311.000000 us
+user time: 3057.000000 us
+real time: 3377.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 7.000000 us
+user time: 9187.000000 us
+real time: 9194.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 170.000000 us
+user time: 2374.000000 us
+real time: 2577.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 257.000000 us
+user time: 2813.000000 us
+real time: 3072.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
+
+
+TABLE WITH VARIABLE LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 128.000000 us
+user time: 1453.000000 us
+real time: 1793.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 31.000000 us
+user time: 17672.000000 us
+real time: 17726.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 27.000000 us
+user time: 793.000000 us
+real time: 824.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 22.000000 us
+user time: 903.000000 us
+real time: 934.000000 us
+
+TABLE WITH FIXED LEGTH OF BLOCKS:
+
+1. Creating a table with 1000 elements and adding  1000 strings with variable length: 
+
+Time taken to perform this task:
+system time: 414.000000 us
+user time: 3301.000000 us
+real time: 3919.000000 us
+
+2. Perform about 100 searchings of string with closest sum to defined one: 
+
+Time taken to perform this task:
+system time: 19.000000 us
+user time: 8800.000000 us
+real time: 8835.000000 us
+
+3. Deleting 500 records and then adding 500 new records: 
+
+Time taken to perform this task:
+system time: 47.000000 us
+user time: 2360.000000 us
+real time: 3043.000000 us
+
+4. Deleting and adding 1000 records one by one: 
+
+Time taken to perform this task:
+system time: 1.000000 us
+user time: 2424.000000 us
+real time: 2425.000000 us
+
+THANK YOU FOR YOUR ATTENTION :)
+
