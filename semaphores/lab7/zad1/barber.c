@@ -31,7 +31,7 @@ int *shmTab;
 // SIGNAL HANDLERS //
 
 void sigTermHandler(int signum){
-    printf("sigterm\n");
+    printf("\nsigterm\n");
     exit(0);
 }
 
@@ -47,24 +47,29 @@ pid_t fifo_pop(pid_t *shmTab) {
     
     int index = shmTab[2];
     shmTab[2] = (shmTab[2] + 1 + 4 * ((shmTab[2] + 1) / shmTab[0])) % shmTab[0]; // guard of the index range
+    
+
     --shmTab[1];
     
     
     return shmTab[index];
 }
 
+
 long getTime() {
     struct timespec time;
     if (clock_gettime(CLOCK_MONOTONIC, &time) == -1){
-        printf("problem with time\n");
+        printf("we've got problem with time\n");
     }
     return time.tv_nsec/1000;
 }
 
 
-void give_semaphore(int semId, unsigned short semIndex) {
+
+
+void give_semaphore(int semId, unsigned short semNumber) {
     struct sembuf smbuf;
-    smbuf.sem_num = semIndex;
+    smbuf.sem_num = semNumber;
     smbuf.sem_op = 1;
     smbuf.sem_flg = 0;
     
@@ -74,9 +79,9 @@ void give_semaphore(int semId, unsigned short semIndex) {
     }
 }
 
-void take_semaphore(int semId, unsigned short semIndex) {
+void take_semaphore(int semId, unsigned short semNumber) {
     struct sembuf smbuf;
-    smbuf.sem_num = semIndex;
+    smbuf.sem_num = semNumber;
     smbuf.sem_op = -1;
     smbuf.sem_flg = 0;
     
@@ -86,10 +91,12 @@ void take_semaphore(int semId, unsigned short semIndex) {
     }
 }
 
+
+
 void make_cut(int client_pid, int semId) {
     printf("We are performing haircut at the time: %ld and the client: %d\n", getTime(), client_pid);
     give_semaphore(semId,CUT);
-    //kill(client_pid, SIGRTMIN);
+
     printf("We are ending the haircut at the time: %ld and the client: %d\n", getTime(), client_pid);
 }
 
@@ -104,7 +111,7 @@ void clean(){
     if(semId != -1) {
         semctl(semId,0,IPC_RMID);
     }
-    printf("zamykamy barbera\n");
+    printf("\nReleased the resources,\ncleaned the stuff,\nand finally barber closed his workshop.\n");
 }
 
 
@@ -118,17 +125,17 @@ void clean(){
 int main(int argc, char** argv){
     
     if(argc != 2){
-        printf("Give the number of haircuts!\n");
+        printf("Give the number of chairs!\n");
         return 1;
     }
     
     
    
-    int N = atoi(argv[1]);
+    int N = atoi(argv[1]); // number of haircuts
     
     
     atexit(clean);
-    signal(SIGINT,sigTermHandler);
+    signal(SIGTERM,sigTermHandler);
     key_t key = ftok("./barber.c",'k');
     
     semId = semget(key, 4, IPC_CREAT | 0600);
@@ -139,10 +146,10 @@ int main(int argc, char** argv){
     
     // let's configure semaphore
     
-    if(semctl(semId,BARBER,SETVAL,0) == -1 ||
-       semctl(semId,FIFO,SETVAL,1) ||
-       semctl(semId,CLIENT,SETVAL,1) ||
-       semctl(semId,CUT,SETVAL,0)){
+    if(semctl(semId,BARBER,SETVAL,0) != 0 ||
+       semctl(semId,FIFO,SETVAL,1) != 0 ||
+       semctl(semId,CLIENT,SETVAL,1) != 0 ||
+       semctl(semId,CUT,SETVAL,0) != 0 ){
         printf("Error while initializing the semaphores value\n");
     }
     
@@ -167,27 +174,32 @@ int main(int argc, char** argv){
     shmTab[1] = 0; // how many clients
     shmTab[2] = 4; // index
     
-    int clients;
+    int client;
     
-    printf("I go to sleep: %zu \n", getTime());
-    
+    printf("TIME: %ld, BARBER: %d : I go to sleep...\n", getTime(), getpid());
+
     while(1){//sigterm only ends this program
         
         take_semaphore(semId,BARBER); // sleep
-        take_semaphore(semId,FIFO); // waiting for fifo, to take client
-        clients = shmTab[3];//how many clients in the lobby
+        take_semaphore(semId,FIFO); // waiting for fifo in order to take client
+        
+        
+        printf("TIME: %ld : Someone awakes me!\n", getTime());
+        client = shmTab[3];//first client
+        
         give_semaphore(semId,FIFO);
-        make_cut(clients, semId);
+        make_cut(client, semId);
         
         while(1){
             take_semaphore(semId,FIFO);
-            clients = fifo_pop(shmTab);
-            if(clients!=-1){
-                make_cut(clients, semId);
+            client = fifo_pop(shmTab);
+            
+            if(client != -1){
+                make_cut(client, semId);
                 give_semaphore(semId,FIFO);
             }
             else{
-                printf("I go to sleep: %zu \n", getTime());
+                printf("TIME: %ld, BARBER: %d : I go to sleep...\n", getTime(), getpid());
                 take_semaphore(semId,BARBER);
                 give_semaphore(semId,FIFO);
                 break;
