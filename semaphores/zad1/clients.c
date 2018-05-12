@@ -20,8 +20,7 @@
 
 #define BARBER 0
 #define FIFO 1
-#define CLIENT 2
-#define CUT 3
+#define CUT 2
 
 #define EXIT_FAILURE 1
 #define EXIT_SUCCESS 0
@@ -36,7 +35,7 @@ int actualCuts = 0;
 // SIGNAL HANDLERS //
 
 void sigTermHandler(int signum){
-    printf("sigterm\n");
+    printf("\nsigterm\n");
     exit(0);
 }
 
@@ -54,11 +53,9 @@ int fifo_is_full(pid_t *tab) {
 
 int fifo_push(pid_t *tab, pid_t client_pid) {
     if(fifo_is_full(tab)) return -1;
-    //printf("I'm CLIENT: %d, the fifo is not full :)\n",client_pid);
    
-    int i = ((tab[1] + tab[2]) % tab[0]) + 4 * ((tab[1]+tab[2]) / tab[0]); // magic index :) (nah, just looping back if exceeded the range)
-    //printf("I'm CLIENT: %d, The value of i: %d\n",client_pid,i);
-  
+    int i = ((tab[1] + tab[2]) % tab[0]) + 4 * ((tab[1]+tab[2]) / tab[0]); // guard of the index
+    
     tab[i] = client_pid;
     
     ++tab[1]; // incrementing actual clients
@@ -71,6 +68,7 @@ pid_t fifo_pop(pid_t *tab) {
     
     int i = tab[2];
     tab[2] = (tab[2] + 1 + 4 * ((tab[2] + 1) / tab[0])) % tab[0];
+
     --tab[1];
     
     
@@ -115,28 +113,32 @@ void take_semaphore(int semId, unsigned short semIndex) {
     }
 }
 
+// IMPORTANT ADDITIONAL FUNCTIONS //
 
 int try_to_seat() {
+    
     int status;
     take_semaphore(semId,FIFO);
     int barber_semval = semctl(semId,BARBER,GETVAL);
+    
     if(barber_semval == -1) {
         exit_program(EXIT_FAILURE, "Barber semaphore checking error");
     }
     
     if(barber_semval == 0) {    // if barber is sleeping
-        printf("%ld, %d CLIENT: Barber is sleeping. Let's wake him up.\n", getTime(), getpid());
+        printf("TIME: %ld, %d CLIENT: Barber is sleeping. Let's wake him up.\n", getTime(), getpid());
         give_semaphore(semId,BARBER); // let's wake him up
         give_semaphore(semId,BARBER); //  (indicates that barber is working
         shmTab[3]=getpid(); // sit on chair
+        printf("TIME: %ld, %d CLIENT: Takes the seat in order to cut!.\n", getTime(), getpid());
         status = 0;
-        // and give him the fifo semaphore
+        
      }else{ // if barber doing something try to seat in the waiting room
         if(fifo_push(shmTab,getpid()) == -1) { // if the queue is full
-            printf("%ld, %d CLIENT: Barber is full. Going away.\n", getTime(), getpid());
+            printf("TIME: %ld, %d CLIENT: Barber is full. I'm leaving.\n", getTime(), getpid());
             status = -1;
         } else {
-            printf("%d, %d CLIENT: Barber is busy. Taking seat in waiting room. \n", getTime(), getpid());
+            printf("TIME: %ld, %d CLIENT: Barber is busy. Taking seat in waiting room. \n", getTime(), getpid());
             status = 0;
         }
     }
@@ -144,6 +146,8 @@ int try_to_seat() {
     give_semaphore(semId,FIFO); // give the semaphore to someone else
     return status;
 }
+
+
 
 int visit_barber(int S) {
     
@@ -154,7 +158,7 @@ int visit_barber(int S) {
         if(result == 0) {
             take_semaphore(semId,CUT);
             ++actualCuts;
-            printf("%ld, %d CLIENT: Good job and great hair! Goodbye!.\n", getTime(), getpid());
+            printf("TIME: %ld, %d CLIENT: Pays and leaves!.\n", getTime(), getpid());
         }
     }
     if(shmdt(shmTab) == -1)
@@ -164,7 +168,7 @@ int visit_barber(int S) {
 
 
 
-void init_result() {
+void init() {
     
     key_t key = ftok("./barber.c",'k');
     int shm_id = shmget(key,0,0);
@@ -180,18 +184,23 @@ void init_result() {
         exit_program(EXIT_FAILURE,"Error while getting semaphores");
 }
 
+
+
+
+
+
 int main(int argc, char **argv) {
     // N - number of clients to create and S - number of required cuts
     
     if(argc != 3) {
-        exit_program(EXIT_FAILURE, "Bad number of arguments! Pass the number of clients to create and the number of required cuts");
+        exit_program(EXIT_FAILURE, "Bad number of arguments! Pass the number of clients to create and the number of required cuts!");
     }
     
     int N = atoi(argv[1]), S = atoi(argv[2]);
     
-    signal(SIGINT,sigTermHandler);
+    signal(SIGTERM,sigTermHandler);
     
-    init_result();
+    init();
     
     for(int i = 0; i < N; i++) {
         if(fork() == 0) { // don't let children create their own children
