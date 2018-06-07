@@ -1,0 +1,2 @@
+4 4 3 Pan_Tadeusz.txt 25 	0 	0 	1 
+P K N  	FILE	      chars	s_mode  v_mode  nk
