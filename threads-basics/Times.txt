@@ -1,0 +1,12 @@
+Results: number of threads: 1	Real time: 9.631212s	 User time: 9.550845s	 System time 0.047343s
+Results: number of threads: 2	Real time: 4.960338s	 User time: 9.817022s	 System time 0.025889s
+Results: number of threads: 4	Real time: 4.191925s	 User time: 15.763390s	 System time 0.036233s
+Results: number of threads: 8	Real time: 4.210506s	 User time: 15.839978s	 System time 0.023599s
+Results: number of threads: 1	Real time: 30.483240s	 User time: 30.098624s	 System time 0.131673s
+Results: number of threads: 2	Real time: 15.507274s	 User time: 30.704983s	 System time 0.070630s
+Results: number of threads: 4	Real time: 13.965742s	 User time: 50.248585s	 System time 0.126730s
+Results: number of threads: 8	Real time: 12.967687s	 User time: 50.159891s	 System time 0.083345s
+Results: number of threads: 1	Real time: 56.703361s	 User time: 56.072998s	 System time 0.225851s
+Results: number of threads: 2	Real time: 30.700139s	 User time: 59.487208s	 System time 0.227113s
+Results: number of threads: 4	Real time: 26.848819s	 User time: 94.011946s	 System time 0.256890s
+Results: number of threads: 8	Real time: 25.739906s	 User time: 93.718694s	 System time 0.260997s
